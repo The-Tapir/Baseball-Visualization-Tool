@@ -4,6 +4,8 @@ import pandas as pd
 import plotly.express as px
 import dash_bootstrap_components as dbc
 
+#test comment
+
 # Incorporate data (The 0th line is a title and we do not want it to mess with the header)
 df = pd.read_csv('RED SOX Stats.csv', header=1)
 # Trimming columns to keep and dumping those that we are not using
