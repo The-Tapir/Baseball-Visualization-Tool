@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('raw_game_logs/RED SOX_5-2-2025_Stats.csv', header=1)
+df = pd.read_csv('raw_game_logs/RED SOX_3-8-2025_Stats.csv', header=1)
 
 # Trimming columns to keep and dumping those that we are not using
 columns_to_keep = ["Number", "Last", "First", "GP", "PA", "AB", "AVG", "OBP", "OPS", "SLG", "H", "1B", "2B", "3B", "HR", "RBI", "R", "BB", "SO", "HBP", "BB/K", "BABIP", "SF"]
@@ -19,4 +19,4 @@ combined['OPS'] = round(combined['OBP'] + combined['SLG'], 3)
 combined['BB/K'] = round(combined['BB'] / combined['SO'], 3)
 combined['BABIP'] = round((combined['H'] - combined['HR']) / (combined['AB'] - combined['HR'] - combined['SO'] + combined['SF']), 3)
 
-combined.to_csv("clean_game_logs/red_sox_5-2_stats_clean.csv", index = False)
+combined.to_csv("clean_game_logs/red_sox_3-8_stats_clean.csv", index = False)
