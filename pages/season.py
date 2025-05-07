@@ -37,6 +37,7 @@ layout = dbc.Container([
 
 ], fluid=True)
 
+# Updating the graph based on the button selected
 @callback(
     Output(component_id='stat_graph', component_property='figure'),
     Input(component_id='graph_selection', component_property='value')
